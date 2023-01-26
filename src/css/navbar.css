@@ -2,3 +2,8 @@
     color: white;
     /* background-color: rgb(85, 50, 50); */
 }
+.btns:hover{
+    background-color: rgb(102, 61, 61);
+    color: rgb(186, 158, 158);
+
+}

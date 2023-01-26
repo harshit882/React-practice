@@ -14,6 +14,7 @@ export default function TextForm({heading ,myStyle}) {
     }
     let convertToUpper =() => {
         setText(text.toUpperCase())
+        
     }
     
     let convertToLower =() => {
@@ -24,9 +25,7 @@ export default function TextForm({heading ,myStyle}) {
    
    return (
     <>
-    <div class="alert alert-dark" role="alert">
-        
-    </div>
+
     <div className='textForm container mt-3 ' >
    
         <div className="mb-3 ">

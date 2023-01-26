@@ -1,6 +1,9 @@
-import React from "react";
+import React  from "react";
 import './css/navbar.css'
+import Alert from './Alert';
 export default function Nabvar(props) {
+    
+
     return(
         <>
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -22,6 +25,11 @@ export default function Nabvar(props) {
                 </li>
             </ul>
             </div>
+            <div className="m-2">
+  <div className="m-2">
+    <button className="btn btn-dark bg-dark border border-dark-subtle btn-sm btns" id="color-picker-2">Open Picker</button>
+  </div>
+</div>
             <div className="form-check form-switch mode">
             <input className="form-check-input"  type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{`Disable ${props.myStyle} mode`}</label>
@@ -29,6 +37,9 @@ export default function Nabvar(props) {
         </div>
         
         </nav>
+            <Alert alertType ='success' alertMsg ={props.alertMsg}/>
+
+        
         </>
     )
 }
