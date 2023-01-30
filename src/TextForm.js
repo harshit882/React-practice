@@ -4,13 +4,16 @@ export default function TextForm({heading ,myStyle}) {
     const [text ,setText] =useState('')
   
     const [count ,setCount] =useState(0)
-    const [wordCount ,setWordCount] =useState(0)
+    const [last_st,setLast] =useState('')
+    
     let handelChange = e =>{
         const {value} =e.target
         setText(value)
         let str =document.getElementById("myBox").value
-        setCount(str.length)
-        setWordCount(str.split(' ').length)
+        setLast(str)
+        last_st ===' '? setCount(0) : setCount(str.length)
+
+       
     }
     let convertToUpper =() => {
         setText(text.toUpperCase())
@@ -36,7 +39,7 @@ export default function TextForm({heading ,myStyle}) {
   <button className="btn btn-primary ms-2" id='upperCase' type="button" onClick={convertToUpper}>Convert to UpperCase</button>
   <button className="btn btn-primary ms-2" id='lowercase' type="button" onClick={convertToLower}>Convert to Lowercase</button>
   {/* <button className="btn btn-primary ms-2" id='lowercase' type="button" onClick={convertToLower}>Convert to Lowercase</button> */}
-  <p id="summary" className='p-3'>total number of letters : {count} and total words :{wordCount}</p>
+  <p id="summary" className='p-3'>total number of letters : {count} and total words :{text.split(' ').filter((input)=>{return input.length !== 0}).length}</p>
 </div>
     </div>
     </>

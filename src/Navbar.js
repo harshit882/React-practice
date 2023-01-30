@@ -1,6 +1,7 @@
 import React  from "react";
 import './css/navbar.css'
 import Alert from './Alert';
+import { Link } from "react-router-dom";
 export default function Nabvar(props) {
     
 
@@ -8,27 +9,32 @@ export default function Nabvar(props) {
         <>
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
             <div className="container-fluid">
-            <a className="navbar-brand" href="/#">{props.title}</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <Link className="navbar-brand" to="/#">{props.title}</Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/#">Home</a>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/#">About Us</a>
+                <Link className="nav-link" to="/about">About Us</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/#">Contact</a>
+                <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
+                <li className="nav-item">
+                <button className="btn btn-dark bg-dark border border-dark-subtle btn-sm btns my-1" id="color-picker-2">Open Picker</button>
+                </li>
+
             </ul>
             </div>
             <div className="m-2">
-  <div className="m-2">
-    <button className="btn btn-dark bg-dark border border-dark-subtle btn-sm btns" id="color-picker-2">Open Picker</button>
-  </div>
+  
+   
+  
 </div>
             <div className="form-check form-switch mode">
             <input className="form-check-input"  type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>

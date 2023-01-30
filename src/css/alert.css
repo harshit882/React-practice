@@ -1,0 +1,12 @@
+.shows{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(126, 126, 177,0.48);
+    backdrop-filter: blur(10px);
+    color: rgb(20, 196, 70);
+   box-sizing: border-box;
+}
+body{
+    position: relative;
+}
